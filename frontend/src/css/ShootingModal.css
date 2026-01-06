@@ -1,0 +1,68 @@
+/* --- Modal Overlay --- */
+.shooting-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center modal vertically and horizontally */
+  z-index: 1000;
+}
+
+/* --- Modal Wrapper (Scroll Logic) --- */
+.modal-wrapper {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden; /* Maintains border-radius with child content */
+  display: flex;
+  flex-direction: column; /* Stacks Header and Body vertically */
+  max-height: 80vh; /* Limits height to 80% of viewport */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Header Section --- */
+.shooting-modal-header {
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0; /* Prevents header from shrinking when content is long */
+}
+
+/* --- Scrollable Body Section --- */
+.shooting-modal-body {
+  padding: 20px;
+  overflow-y: auto; /* Enables vertical scrolling within this container */
+  flex-grow: 1; /* Fills remaining vertical space */
+  background: #fff;
+}
+
+.btn-close-modal {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- Custom Scrollbar Styling (Webkit) --- */
+.shooting-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+.shooting-modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.shooting-modal-body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.shooting-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

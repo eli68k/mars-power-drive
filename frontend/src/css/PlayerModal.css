@@ -1,0 +1,209 @@
+/* --- Modal Overlay & Container --- */
+.player-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.player-modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    direction: rtl;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* --- Close Button --- */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #e74c3c;
+}
+
+/* --- Modal Layout --- */
+.modal-body {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* --- Right Side: Player Details (Red Theme) --- */
+.player-details-side {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ffcccc;
+}
+
+.player-large-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.player-name-red {
+    margin: 10px 0;
+    color: #c0392b;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.details-list {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 2.2;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffcccc;
+    padding: 8px 0;
+    color: #d63031;
+    font-weight: bold;
+}
+
+.detail-row span {
+    color: #e17055;
+}
+
+/* --- Left Side: Form Section --- */
+.form-side {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.form-title {
+    margin-top: 0;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    color: #3498db;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+}
+
+/* --- Action Buttons --- */
+.btn-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-save {
+    padding: 12px 25px;
+    font-size: 16px;
+    flex: 1;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cancel {
+    padding: 12px 25px;
+    font-size: 16px;
+    flex: 0.5;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Interactive Elements (Clickable Inputs) --- */
+.clickable-input {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.clickable-input:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Specific Border Colors for Categories */
+.orange-border {
+  border: 2px dashed #e67e22;
+  color: #e67e22;
+  background-color: #fffdf0;
+}
+
+.green-border {
+  border: 2px solid #27ae60;
+  color: #27ae60;
+  background-color: #f0fff4;
+}
+
+.blue-border {
+  border: 2px solid #3498db;
+  color: #2980b9;
+  background-color: #f0f8ff;
+}

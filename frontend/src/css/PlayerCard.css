@@ -1,0 +1,89 @@
+/* --- Card Container Layout --- */
+.card-container {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 800px;
+  max-width: 95%;
+  margin: 20px auto;
+  overflow: hidden;
+  direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Content Sections --- */
+.card-header {
+  flex: 2;
+  padding: 20px;
+  border-left: 1px solid #eee;
+}
+
+.card-profile {
+  flex: 1;
+  background-color: #fff5f0; /* Soft pink background */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Profile Image --- */
+.player-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Typography --- */
+.card-header h3 {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* --- Training Section Styles --- */
+.training-section {
+  margin-bottom: 20px;
+}
+
+.training-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Dashed Box Style (Clickable Area) */
+.dashed-box {
+  border: 2px dashed #e67e22;
+  background-color: #fffbf5;
+  color: #e67e22;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.dashed-box:hover {
+  background-color: #ffeacc;
+}
+
+/* --- Form Elements --- */
+.simple-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+}

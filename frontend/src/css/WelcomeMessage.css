@@ -1,0 +1,48 @@
+/* --- Welcome Toast Overlay --- */
+.welcome-toast-overlay {
+  position: fixed;
+  top: 15%; /* Position slightly below the top */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100000; /* Must be higher than screensaver (99999) */
+  pointer-events: none; /* Allows clicks to pass through to elements below */
+}
+
+/* --- Toast Box Styling --- */
+.welcome-toast-box {
+  background: rgba(33, 37, 41, 0.95); /* Strong dark background */
+  color: #fff;
+  padding: 15px 50px;
+  border-radius: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 3px solid #e67e22; /* Team Orange Border */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: center;
+  
+  /* Entrance and Exit Animation */
+  animation: toastAnimation 3s forwards;
+}
+
+/* --- Keyframes Animation --- */
+@keyframes toastAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
